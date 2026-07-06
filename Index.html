@@ -245,6 +245,84 @@
   }
 
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+  /* ── Consent section ── */
+  .consent-section {
+    border: 2px solid var(--pink);
+    position: relative;
+  }
+
+  .consent-section::before {
+    content: "Required by GDPR";
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: var(--pink);
+    color: white;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 2px 10px;
+    border-radius: 99px;
+  }
+
+  .consent-steps {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .consent-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .step-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--gradient);
+    color: white;
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .step-text {
+    font-family: var(--font-ui);
+    font-size: 15px;
+    color: #3D3550;
+    padding-top: 5px;
+    line-height: 1.5;
+  }
+
+  .consent-note {
+    display: flex;
+    gap: 12px;
+    background: var(--soft-bg);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-top: 8px;
+  }
+
+  .consent-note-icon { font-size: 20px; flex-shrink: 0; }
+
+  .consent-note p {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.55;
+  }
+
 </style>
 </head>
 <body>
@@ -397,6 +475,59 @@
     <div class="section-label">09 — Updates</div>
     <h2>Changes to this policy</h2>
     <p>We may update this privacy policy from time to time. When we do, we will update the date at the top of this page. Continued use of KittyMystery after changes constitutes acceptance of the updated policy.</p>
+  </div>
+
+
+  <!-- MANAGE CONSENT — anchor required by Google AdMob GDPR policy -->
+  <div class="section consent-section" id="manage-consent">
+    <div class="section-label">10 — Manage Consent</div>
+    <h2>Withdraw or change your advertising consent</h2>
+    <p>
+      You gave consent for personalised advertising when you first opened KittyMystery.
+      You can <strong>withdraw or change this consent at any time</strong> — it will not affect
+      anything that happened before you change your mind.
+    </p>
+
+    <div class="consent-steps">
+      <div class="consent-step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <strong>Open KittyMystery</strong> on your iPhone or iPad.
+        </div>
+      </div>
+      <div class="consent-step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          Tap the <strong>⚙️ gear icon</strong> in the top-right corner of the puzzle screen.
+        </div>
+      </div>
+      <div class="consent-step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          Tap <strong>"Manage Ad Preferences"</strong> — the Google consent form will open.
+        </div>
+      </div>
+      <div class="consent-step">
+        <div class="step-num">4</div>
+        <div class="step-text">
+          Choose <strong>"Do not consent"</strong> or adjust your preferences and confirm.
+        </div>
+      </div>
+    </div>
+
+    <div class="consent-note">
+      <span class="consent-note-icon">ℹ️</span>
+      <p>
+        If you withdraw consent, you will see <strong>non-personalised ads</strong> instead.
+        The game remains fully free to play either way.
+        Your choice applies only to this device and this app.
+      </p>
+    </div>
+
+    <p style="margin-top:16px; font-family: -apple-system, sans-serif; font-size:14px; color:var(--muted);">
+      Prefer to contact us directly?
+      <a href="mailto:privacy@[yourdomain].com">privacy@[yourdomain].com</a>
+    </p>
   </div>
 
   <!-- Contact -->
